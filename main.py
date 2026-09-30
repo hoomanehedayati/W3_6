@@ -20,11 +20,11 @@ elif choice == 2:
    choiceweight = int(input("Your choice:"))
    if choiceweight == 1:
       grams = float(input("Insert grams:"))
-      gtop = round(grams * 0.002205,4)
+      gtop = round(grams / 453.6,4)
       print(f'{grams} g is {gtop} lb')
    elif choiceweight == 2:
       pounds = float(input("Insert pounds:"))
-      ptog = round(pounds / 0.002205,1)
+      ptog = round(pounds * 453.6,1)
       print(f'{pounds} lb is {ptog} g')
    elif choiceweight == 0:
       print("Exiting...")
