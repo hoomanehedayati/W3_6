@@ -1,19 +1,11 @@
 print("Program starting.")
 print("Welcome to the unit converter program!")
-print("Follow the menu instructions below.")
-print()
-print("Options:")
-print("1 - Length")
-print("2 - Weight")
-print("0 - Exit")
+print("Follow the menu instructions below.\n")
+print("Options:\n1 - Length\n2 - Weight\n0 - Exit")
 choice = int(input("Your choice: "))
 
 if choice == 1:
-    print()
-    print("Length options:")
-    print("1 - Meters to kilometers")
-    print("2 - Kilometers to meters")
-    print("0 - Exit")
+    print("\nLength options:\n1 - Meters to kilometers\n2 - Kilometers to meters\n0 - Exit")
     sub = int(input("Your choice: "))
     if sub == 1:
         meters = float(input("Insert meters: "))
@@ -28,11 +20,7 @@ if choice == 1:
     else:
         print("Unknown option.")
 elif choice == 2:
-    print()
-    print("Weight options:")
-    print("1 - Grams to pounds")
-    print("2 - Pounds to grams")
-    print("0 - Exit")
+    print("\nWeight options:\n1 - Grams to pounds\n2 - Pounds to grams\n0 - Exit")
     sub = int(input("Your choice: "))
     if sub == 1:
         grams = float(input("Insert grams: "))
@@ -47,10 +35,8 @@ elif choice == 2:
     else:
         print("Unknown option.")
 elif choice == 0:
-    print()
-    print("Exiting...")
+    print("\nExiting...")
 else:
     print("Unknown option.")
 
-print()
-print("Program ending.")
+print("\nProgram ending.")
