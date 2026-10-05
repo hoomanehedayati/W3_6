@@ -1,42 +1,55 @@
 print("Program starting.")
 print("Welcome to the unit converter program!")
-print("Follow the menu instructions below.\n")
-print("Options:\n1 - Length\n2 - Weight\n0 - Exit")
-choice = int(input("Your choice: "))
+print("Follow the menu instructions below.")
+print()
+print("Options:")
+print("1 - Length")
+print("2 - Weight")
+print("0 - Exit")
+choice = input("Your choice: ")
 
-if choice == 1:
-    print("\nLength options:\n1 - Meters to kilometers\n2 - Kilometers to meters\n0 - Exit")
-    sub = int(input("Your choice: "))
-    if sub == 1:
+if choice == "1":
+    print()
+    print("Length options:")
+    print("1 - Meters to kilometers")
+    print("2 - Kilometers to meters")
+    print("0 - Exit")
+    choice = input("Your choice: ")
+    if choice == "1":
         meters = float(input("Insert meters: "))
-        km = meters / 1000
-        print(f"{meters} m is {km} km")
-    elif sub == 2:
-        km = float(input("Insert kilometers: "))
-        meters = km * 1000
-        print(f"{km} km is {meters} m")
-    elif sub == 0:
+        kilometers = meters * 0.001
+        print(f"{meters:.1f} m is {kilometers:.1f} km")
+    elif choice == "2":
+        kilometers = float(input("Insert kilometers: "))
+        meters = kilometers * 1000
+        print(f"{kilometers:.1f} km is {meters:.1f} m")
+    elif choice == "0":
         print("Exiting...")
     else:
         print("Unknown option.")
-elif choice == 2:
-    print("\nWeight options:\n1 - Grams to pounds\n2 - Pounds to grams\n0 - Exit")
-    sub = int(input("Your choice: "))
-    if sub == 1:
+elif choice == "2":
+    print()
+    print("Weight options:")
+    print("1 - Grams to pounds")
+    print("2 - Pounds to grams")
+    print("0 - Exit")
+    choice = input("Your choice: ")
+    if choice == "1":
         grams = float(input("Insert grams: "))
         pounds = grams * 0.002205
-        print(f"{grams} g is {pounds} lb")
-    elif sub == 2:
+        print(f"{grams:.1f} g is {pounds:.1f} lb")
+    elif choice == "2":
         pounds = float(input("Insert pounds: "))
         grams = pounds * 453.6
-        print(f"{pounds} lb is {grams} g")
-    elif sub == 0:
+        print(f"{pounds:.1f} lb is {grams:.1f} g")
+    elif choice == "0":
         print("Exiting...")
     else:
         print("Unknown option.")
-elif choice == 0:
-    print("\nExiting...")
+elif choice == "0":
+    print("Exiting...")
 else:
     print("Unknown option.")
 
-print("\nProgram ending.")
+print()
+print("Program ending.")
